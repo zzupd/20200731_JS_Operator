@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>불리언자료형을 사용한 홀/짝수 구분</title>
+    <style>
+        li {
+            width: 300px;
+            height: 60px;
+            font-size: 30px;
+        }
+        input, button, span {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>불리언자료형을 사용한 성별 구분</h1>
+    <h2>입력한 값이 홀수라면 "Male(남)" 출력, 짝수면 "Female(여)" 출력</h2>
+    <ol>
+        <li>
+            입력 <input type="text" size="5" id="data1">
+        </li>
+        <li>
+            <button type="button" onclick="fnMod()">
+            처리
+            </button>
+        </li>
+        <li>
+            출력 : <span id="res"></span>
+        </li>
+    </ol>
+
+    <script>
+        function fnMod() {
+            var number = parseInt(document.getElementById("data1").value);
+            //       조건식                ?      첫번째영역    :    두번째영역;
+             var res = (number % 2 == 0) ?    "짝수"      :      "홀수"   ;
+              // res에는 "짝수" 또는 "홀수"  둘 중에 1개만 저장된다.
+
+            //            alert( number % 2  == 0 );
+            //               true / false
+
+            document.getElementById("res").innerText = res;
+
+        }
+    </script>
+
+</body></html>

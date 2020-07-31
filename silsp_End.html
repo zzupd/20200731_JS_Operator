@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML & JS 데이터 교환</title>
+    <style>
+        li {
+            width: 300px;
+            font-size: 30px;
+            line-height: 60px;
+        }
+        input, button, span { font-size: 30px; }
+    </style>
+</head>
+<body>
+
+   <h1>HTML & JS 데이터 교환</h1>
+   <ol>
+       <li>
+           입력 <input type="text" id="txt01" size="5">
+       </li>
+       <li>
+           <button type="button" onclick="fnProcess()">
+           처리
+           </button>
+       </li>
+       <li>
+           출력 : <span id="res"></span>
+       </li>
+   </ol>
+    <script>
+    function fnProcess() {
+        var data = document.getElementById("txt01").value;
+
+        document.getElementById("res").innerText = data;
+    }
+    </script>
+</body>
+</html>

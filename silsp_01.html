@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>산술연산자</title>
+</head>
+<body>
+    <h1>산술연산자 : +, -, *, /, %</h1>
+    데이터1 <input type="number" id="data1" style="width: 60px">
+    <br>
+    <h2 id="data3">30</h2>
+    <button type="button" onclick="fnData()">확인</button>
+
+    <div id="res" style="font-size: 30px; border: 1px solid blue;"></div>
+
+    <script>
+
+        function fnData() {
+
+//            html에서 요소의 text에서의 입력
+              var data3 = document.getElementById("data3").innerText;
+              document.getElementById("res").innerText = data3 + 20;
+
+
+
+
+//            html에서 value 속성에서의 입력
+//            var data1 =  parseInt(document.getElementById("data1").value)  ;
+//            typeof data1;
+//            var res = data1 + 20;
+//            document.getElementById("res").innerText = res;
+
+//             JS 입력
+//              var data2 = prompt("값을 입력하세요");
+//              data2 = 5 + data2;
+//              document.getElementById("res").innerText = data2;
+        }
+
+
+
+    </script>
+</body>
+</html>
